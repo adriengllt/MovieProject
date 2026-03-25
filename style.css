@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #032541;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header i {
+    color: white;
+    font-size: 40px;
+}
+
+.avengers {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/avengers.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.search-bar {
+    display: flex;
+
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 40%;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #032541;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 70px;
+}
+
+.movies {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movies h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #032541;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.series {
+    padding: 40px 20px;
+    background-color: #E7E7E7;
+}
+
+.series h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #032541;
+}

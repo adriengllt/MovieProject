@@ -2,12 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+    <link href="style.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <script defer src="script.js" type="module"></script>
     <title>Document</title>
 </head>
 <body>
+<header>
+    <a href="index.html">
+        <i class="fa-solid fa-film"></i>
+    </a>
+    <nav>
+        <a href="#">Films</a>
+        <a href="#">Séries</a>
+        <a href="#">Populaires</a>
+    </nav>
+</header>
+<section class="avengers">
+    <div class="search-bar">
+        <input placeholder="Rechercher un film..." type="text">
+    </div>
+</section>
+<section class="movies">
+    <div class="container">
+        <h2>Tendances</h2>
+        <div class="movie-list" id="movie-list">
 
+        </div>
+    </div>
+</section>
+<section class="series">
+    <div class="container">
+        <h2>Séries TV</h2>
+        <div class="serie-list" id="serie-list">
+
+        </div>
+    </div>
+</section>
+<footer>
+    <p>© 2024 MovieApp. All rights reserved.</p>
+</footer>
 </body>
 </html>
