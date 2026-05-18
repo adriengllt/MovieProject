@@ -1,0 +1,149 @@
+.detail-hero {
+    background-size: cover;
+    background-position: center;
+    padding: 60px 40px;
+    color: white;
+
+    & .detail-hero-contenu {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    & .detail-affiche {
+        width: 200px;
+        min-width: 200px;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    & .detail-infos {
+        flex: 1;
+
+        & h1 {
+            font-size: 2rem;
+            margin: 0 0 8px;
+        }
+
+        & .detail-annee {
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        & .detail-meta {
+            font-size: 15px;
+            opacity: 0.85;
+            margin: 0 0 20px;
+        }
+
+        & h2 {
+            font-size: 1.1rem;
+            margin: 0 0 8px;
+            font-weight: 700;
+        }
+
+        & .detail-synopsis {
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
+            opacity: 0.9;
+        }
+    }
+}
+
+.detail-note {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #032541;
+    border: 3px solid #21d07a;
+    margin-bottom: 20px;
+
+    & span {
+        font-weight: 900;
+        font-size: 14px;
+        color: white;
+    }
+}
+
+.detail-casting {
+    padding: 40px 0;
+    background: white;
+
+    & .contenu {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    & h2 {
+        font-size: 1.6rem;
+        color: #032541;
+        margin-bottom: 24px;
+    }
+}
+
+.grille-acteurs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.carte-acteur {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: apparition 0.4s ease both;
+
+    & img {
+        width: 100%;
+        aspect-ratio: 2/3;
+        object-fit: cover;
+        display: block;
+    }
+
+    & .acteur-nom {
+        font-weight: 700;
+        font-size: 14px;
+        margin: 10px 10px 4px;
+    }
+
+    & .acteur-role {
+        font-size: 13px;
+        color: #666;
+        margin: 0 10px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-hero {
+        padding: 30px 16px;
+
+        & .detail-hero-contenu {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        & .detail-affiche {
+            width: 160px;
+            min-width: 160px;
+        }
+    }
+
+    .detail-casting {
+        & .contenu {
+            padding: 0 16px;
+        }
+    }
+
+    .grille-acteurs {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}

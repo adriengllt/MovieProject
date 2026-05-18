@@ -1,48 +1,102 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-    <link href="style.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script defer src="script.js" type="module"></script>
-    <title>Document</title>
+    <title>MovieApp</title>
 </head>
 <body>
+
 <header>
-    <a href="index.html">
+    <a aria-label="Accueil" href="index.html">
         <i class="fa-solid fa-film"></i>
     </a>
     <nav>
-        <a href="#">Films</a>
-        <a href="#">Séries</a>
-        <a href="#">Populaires</a>
+        <a href="#tendances">Tendances</a>
+        <a href="#films">Films</a>
+        <a href="#series">Séries</a>
     </nav>
 </header>
-<section class="avengers">
-    <div class="search-bar">
-        <input placeholder="Rechercher un film..." type="text">
-    </div>
-</section>
-<section class="movies">
-    <div class="container">
-        <h2>Tendances</h2>
-        <div class="movie-list" id="movie-list">
 
+<section class="hero">
+    <div class="hero-contenu">
+        <h1>Des millions de films et séries à découvrir.</h1>
+        <div class="barre-recherche">
+            <input id="input-recherche" placeholder="Rechercher un film, une série…" type="text">
+            <button id="bouton-recherche">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
     </div>
 </section>
-<section class="series">
-    <div class="container">
-        <h2>Séries TV</h2>
-        <div class="serie-list" id="serie-list">
 
+<section class="zone-resultats" hidden id="zone-resultats"></section>
+
+<section id="tendances">
+    <div class="contenu">
+        <div class="en-tete-section">
+            <h2>Tendances</h2>
+            <div class="boutons-filtre" id="filtres-tendances">
+                <button class="actif" data-periode="day">Aujourd'hui</button>
+                <button data-periode="week">Cette semaine</button>
+            </div>
         </div>
+        <div class="grille" id="liste-tendances"></div>
     </div>
 </section>
+
+<section id="films">
+    <div class="contenu">
+        <div class="en-tete-section">
+            <h2>Films</h2>
+            <div class="selects-filtre" id="filtres-films">
+                <select data-filtre="with_genres">
+                    <option value="">Tous les genres</option>
+                </select>
+                <select data-filtre="primary_release_year">
+                    <option value="">Toutes les années</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                </select>
+                <select data-filtre="sort_by">
+                    <option value="popularity.desc">Popularité</option>
+                    <option value="vote_average.desc">Note</option>
+                    <option value="release_date.desc">Date de sortie</option>
+                </select>
+            </div>
+        </div>
+        <div class="grille" id="liste-films"></div>
+    </div>
+</section>
+
+<section id="series">
+    <div class="contenu">
+        <div class="en-tete-section">
+            <h2>Séries TV</h2>
+            <div class="selects-filtre" id="filtres-series">
+                <select data-filtre="with_genres">
+                    <option value="">Tous les genres</option>
+                </select>
+                <select data-filtre="sort_by">
+                    <option value="popularity.desc">Popularité</option>
+                    <option value="vote_average.desc">Note</option>
+                    <option value="first_air_date.desc">Date de diffusion</option>
+                </select>
+            </div>
+        </div>
+        <div class="grille" id="liste-series"></div>
+    </div>
+</section>
+
 <footer>
-    <p>© 2024 MovieApp. All rights reserved.</p>
+    <p>© 2024 MovieApp. Tous droits réservés.</p>
 </footer>
+
 </body>
 </html>
